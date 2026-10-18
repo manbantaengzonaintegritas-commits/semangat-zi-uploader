@@ -9,20 +9,128 @@
 <body>
   <div class="container">
     <h1>📂 Pengumpul File <span>Semangat ZI</span></h1>
-    <p class="subtitle">Unggah file data Anda. File akan otomatis tersimpan aman di Google Drive.</p>
+    <p class="subtitle">Pilih kategori, unggah file, dan isi keterangan. File akan otomatis tersimpan di folder yang sesuai.</p>
     
-    <form id="uploadForm">
-      <div class="form-group">
-        <label for="fileInput">Pilih File Data:</label>
-        <input type="file" id="fileInput" name="fileInput" required>
+    <!-- 1. MANAJEMEN PERUBAHAN -->
+    <details class="category-card">
+      <summary>1. MANAJEMEN PERUBAHAN</summary>
+      <div class="sub-category">
+        <h4>Aspek Pemenuhan</h4>
+        <form class="upload-form" data-kategori="1. MANAJEMEN PERUBAHAN" data-sub="Aspek Pemenuhan">
+          <div class="form-group">
+            <label>Pilih File:</label>
+            <input type="file" required>
+          </div>
+          <div class="form-group">
+            <label>Keterangan File:</label>
+            <textarea placeholder="Contoh: Dokumen SOP Revisi 2024" required></textarea>
+          </div>
+          <button type="submit">🚀 Unggah Aspek Pemenuhan</button>
+          <div class="status"></div>
+        </form>
       </div>
-      
-      <button type="submit" id="submitBtn">🚀 Unggah File</button>
-    </form>
-    
-    <div id="status"></div>
-  </div>
+      <div class="sub-category">
+        <h4>Aspek Reform</h4>
+        <form class="upload-form" data-kategori="1. MANAJEMEN PERUBAHAN" data-sub="Aspek Reform">
+          <div class="form-group">
+            <label>Pilih File:</label>
+            <input type="file" required>
+          </div>
+          <div class="form-group">
+            <label>Keterangan File:</label>
+            <textarea placeholder="Contoh: Laporan Inovasi Digital" required></textarea>
+          </div>
+          <button type="submit">🚀 Unggah Aspek Reform</button>
+          <div class="status"></div>
+        </form>
+      </div>
+    </details>
 
+    <!-- 2. PENATAAN TATALAKSANA -->
+    <details class="category-card">
+      <summary>2. PENATAAN TATALAKSANA</summary>
+      <div class="sub-category">
+        <h4>Aspek Pemenuhan</h4>
+        <form class="upload-form" data-kategori="2. PENATAAN TATALAKSANA" data-sub="Aspek Pemenuhan">
+          <div class="form-group"><label>Pilih File:</label><input type="file" required></div>
+          <div class="form-group"><label>Keterangan File:</label><textarea placeholder="Isi keterangan..." required></textarea></div>
+          <button type="submit">🚀 Unggah Aspek Pemenuhan</button><div class="status"></div>
+        </form>
+      </div>
+      <div class="sub-category">
+        <h4>Aspek Reform</h4>
+        <form class="upload-form" data-kategori="2. PENATAAN TATALAKSANA" data-sub="Aspek Reform">
+          <div class="form-group"><label>Pilih File:</label><input type="file" required></div>
+          <div class="form-group"><label>Keterangan File:</label><textarea placeholder="Isi keterangan..." required></textarea></div>
+          <button type="submit">🚀 Unggah Aspek Reform</button><div class="status"></div>
+        </form>
+      </div>
+    </details>
+
+    <!-- 3. PENATAAN SISTEM MANAJEMEN SDM APARATUR -->
+    <details class="category-card">
+      <summary>3. PENATAAN SISTEM MANAJEMEN SDM APARATUR</summary>
+      <div class="sub-category">
+        <h4>Aspek Pemenuhan</h4>
+        <form class="upload-form" data-kategori="3. PENATAAN SISTEM MANAJEMEN SDM APARATUR" data-sub="Aspek Pemenuhan">
+          <div class="form-group"><label>Pilih File:</label><input type="file" required></div>
+          <div class="form-group"><label>Keterangan File:</label><textarea placeholder="Isi keterangan..." required></textarea></div>
+          <button type="submit">🚀 Unggah Aspek Pemenuhan</button><div class="status"></div>
+        </form>
+      </div>
+      <div class="sub-category">
+        <h4>Aspek Reform</h4>
+        <form class="upload-form" data-kategori="3. PENATAAN SISTEM MANAJEMEN SDM APARATUR" data-sub="Aspek Reform">
+          <div class="form-group"><label>Pilih File:</label><input type="file" required></div>
+          <div class="form-group"><label>Keterangan File:</label><textarea placeholder="Isi keterangan..." required></textarea></div>
+          <button type="submit">🚀 Unggah Aspek Reform</button><div class="status"></div>
+        </form>
+      </div>
+    </details>
+
+    <!-- 4. PENGUATAN AKUNTABILITAS -->
+    <details class="category-card">
+      <summary>4. PENGUATAN AKUNTABILITAS</summary>
+      <div class="sub-category">
+        <h4>Aspek Pemenuhan</h4>
+        <form class="upload-form" data-kategori="4. PENGUATAN AKUNTABILITAS" data-sub="Aspek Pemenuhan">
+          <div class="form-group"><label>Pilih File:</label><input type="file" required></div>
+          <div class="form-group"><label>Keterangan File:</label><textarea placeholder="Isi keterangan..." required></textarea></div>
+          <button type="submit">🚀 Unggah Aspek Pemenuhan</button><div class="status"></div>
+        </form>
+      </div>
+      <div class="sub-category">
+        <h4>Aspek Reform</h4>
+        <form class="upload-form" data-kategori="4. PENGUATAN AKUNTABILITAS" data-sub="Aspek Reform">
+          <div class="form-group"><label>Pilih File:</label><input type="file" required></div>
+          <div class="form-group"><label>Keterangan File:</label><textarea placeholder="Isi keterangan..." required></textarea></div>
+          <button type="submit">🚀 Unggah Aspek Reform</button><div class="status"></div>
+        </form>
+      </div>
+    </details>
+
+    <!-- 5. PENINGKATAN KUALITAS PELAYANAN PUBLIK -->
+    <details class="category-card">
+      <summary>5. PENINGKATAN KUALITAS PELAYANAN PUBLIK</summary>
+      <div class="sub-category">
+        <h4>Aspek Pemenuhan</h4>
+        <form class="upload-form" data-kategori="5. PENINGKATAN KUALITAS PELAYANAN PUBLIK" data-sub="Aspek Pemenuhan">
+          <div class="form-group"><label>Pilih File:</label><input type="file" required></div>
+          <div class="form-group"><label>Keterangan File:</label><textarea placeholder="Isi keterangan..." required></textarea></div>
+          <button type="submit">🚀 Unggah Aspek Pemenuhan</button><div class="status"></div>
+        </form>
+      </div>
+      <div class="sub-category">
+        <h4>Aspek Reform</h4>
+        <form class="upload-form" data-kategori="5. PENINGKATAN KUALITAS PELAYANAN PUBLIK" data-sub="Aspek Reform">
+          <div class="form-group"><label>Pilih File:</label><input type="file" required></div>
+          <div class="form-group"><label>Keterangan File:</label><textarea placeholder="Isi keterangan..." required></textarea></div>
+          <button type="submit">🚀 Unggah Aspek Reform</button><div class="status"></div>
+        </form>
+      </div>
+    </details>
+
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
