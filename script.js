@@ -1,5 +1,5 @@
-// GANTI URL DI BAWAH INI DENGAN URL WEB APP DARI LANGKAH 1
-const SCRIPT_URL = 'TEMPEL_URL_WEB_APP_GOOGLE_APPS_SCRIPT_ANDA_DI_SINI';
+// URL Web App Google Apps Script Anda
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzn4fnp2MXVLO4mgBI84F2gZ-449-ghckgE2IEAfK6hlIVRuUy1tA3Mui6Pvex4PIFh/exec';
 
 document.getElementById('uploadForm').addEventListener('submit', function(e) {
   e.preventDefault();
