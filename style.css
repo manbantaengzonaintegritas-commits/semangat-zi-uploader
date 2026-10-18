@@ -1,9 +1,9 @@
 :root {
-  --primary-green: #10B981;   /* Hijau Emerald */
-  --golden: #F59E0B;          /* Emas/Amber */
-  --accent-blue: #3B82F6;     /* Biru Terang */
-  --dark-blue: #1E3A8A;       /* Biru Gelap */
-  --light-bg: #F0FDF4;        /* Hijau Sangat Muda */
+  --primary-green: #10B981;
+  --golden: #F59E0B;
+  --accent-blue: #3B82F6;
+  --dark-blue: #1E3A8A;
+  --light-bg: #F0FDF4;
 }
 
 body {
@@ -12,19 +12,19 @@ body {
   color: #333;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
   margin: 0;
-  padding: 20px;
+  padding: 30px 15px;
 }
 
 .container {
   background-color: #ffffff;
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 480px;
+  max-width: 600px;
   border-top: 6px solid var(--golden);
   border-bottom: 6px solid var(--accent-blue);
 }
@@ -33,56 +33,113 @@ h1 {
   text-align: center;
   color: var(--dark-blue);
   margin-bottom: 0.5rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
-h1 span {
-  color: var(--golden);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
+h1 span { color: var(--golden); }
 
 .subtitle {
   text-align: center;
   color: #666;
   margin-bottom: 2rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
-.form-group {
-  margin-bottom: 1.5rem;
+/* Accordion Styling */
+details.category-card {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 5px solid var(--primary-green);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  overflow: hidden;
 }
+
+summary {
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--dark-blue);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-bg);
+  transition: background 0.3s;
+}
+
+summary:hover { background-color: #dcfce7; }
+
+summary::after {
+  content: '▼';
+  font-size: 0.8rem;
+  color: var(--golden);
+  transition: transform 0.3s;
+}
+
+details[open] summary::after { transform: rotate(180deg); }
+
+.sub-category {
+  padding: 1.2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.sub-category h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--accent-blue);
+  font-size: 1rem;
+  border-bottom: 2px solid var(--golden);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.form-group { margin-bottom: 1rem; }
 
 label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   color: var(--primary-green);
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 input[type="file"] {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 2px dashed var(--accent-blue);
   border-radius: 8px;
-  background-color: var(--light-bg);
+  background-color: #f8fafc;
   cursor: pointer;
-  transition: all 0.3s ease;
   box-sizing: border-box;
 }
 
-input[type="file"]:hover {
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 60px;
+  box-sizing: border-box;
+}
+
+textarea:focus, input[type="file"]:focus {
+  outline: none;
   border-color: var(--golden);
-  background-color: #fffbeb;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
 }
 
 button {
   width: 100%;
-  padding: 14px;
+  padding: 12px;
   background: linear-gradient(90deg, var(--primary-green), var(--golden));
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -90,22 +147,25 @@ button {
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
-  background: linear-gradient(90deg, var(--golden), var(--accent-blue));
+  box-shadow: 0 6px 15px rgba(245, 158, 11, 0.4);
 }
 
 button:disabled {
-  background: #ccc;
+  background: #cbd5e1;
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
 }
 
-#status {
-  margin-top: 1.5rem;
+.status {
+  margin-top: 10px;
   text-align: center;
   font-weight: 600;
-  font-size: 0.95rem;
-  padding: 10px;
+  font-size: 0.85rem;
+  padding: 8px;
   border-radius: 6px;
 }
+
+.status.loading { color: var(--dark-blue); background-color: #DBEAFE; }
+.status.success { color: #065F46; background-color: #D1FAE5; }
+.status.error { color: #DC2626; background-color: #FEE2E2; }
