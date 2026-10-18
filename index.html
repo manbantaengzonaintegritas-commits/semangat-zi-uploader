@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload File - Semangat ZI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📂 Pengumpul File <span>Semangat ZI</span></h1>
+    <p class="subtitle">Unggah file data Anda. File akan otomatis tersimpan aman di Google Drive.</p>
+    
+    <form id="uploadForm">
+      <div class="form-group">
+        <label for="fileInput">Pilih File Data:</label>
+        <input type="file" id="fileInput" name="fileInput" required>
+      </div>
+      
+      <button type="submit" id="submitBtn">🚀 Unggah File</button>
+    </form>
+    
+    <div id="status"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
